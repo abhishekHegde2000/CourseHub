@@ -1,5 +1,0 @@
-fastapi
-httpx
-pytest
-uvicorn
-pydantic
