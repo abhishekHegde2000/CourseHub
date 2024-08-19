@@ -70,3 +70,10 @@ chapters.16.content
 2024-08-19 18:22:11,157 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/courses?sort_by=alphabetical
 2024-08-19 18:22:11,635 - app.middlewares.logging - INFO - Fetched courses list successfully.
 2024-08-19 18:22:11,654 - app.middlewares.logging - INFO - Response: status_code=200
+2024-08-19 18:24:53,112 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/docs
+2024-08-19 18:24:53,112 - app.middlewares.logging - INFO - Response: status_code=200
+2024-08-19 18:24:53,653 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/openapi.json
+2024-08-19 18:24:53,694 - app.middlewares.logging - INFO - Response: status_code=200
+2024-08-19 18:25:04,729 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/courses?sort_by=alphabetical
+2024-08-19 18:25:04,967 - app.middlewares.logging - INFO - Fetched courses list successfully.
+2024-08-19 18:25:04,968 - app.middlewares.logging - INFO - Response: status_code=200
