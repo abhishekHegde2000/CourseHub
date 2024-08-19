@@ -1,91 +1,15 @@
-2024-08-19 18:01:48,186 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/courses?sort_by=alphabetical
-2024-08-19 18:01:48,632 - app.middlewares.logging - ERROR - Failed to list courses: 18 validation errors for Course
-id
-  Field required [type=missing, input_value={'_id': ObjectId('66c3318...mputer Vision Course'}]}, input_type=dict]
+2024-08-19 19:09:00,455 - app.middlewares.logging - INFO - Request: POST http://127.0.0.1:8000/courses/66c349746c7f24be73c1469e/chapters/66c349746c7f24be73c14639/rate?rating=2
+2024-08-19 19:09:01,156 - app.middlewares.logging - ERROR - Failed to rate chapter: 1 validation error for RateResponseSchema
+rating
+  Field required [type=missing, input_value={'message': 'Rating updated successfully'}, input_type=dict]
     For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.0.content
-  Field required [type=missing, input_value={'name': 'Introduction to...ory of computer vision'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.1.content
-  Field required [type=missing, input_value={'name': 'Image Classific...Computer Vision Course'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.2.content
-  Field required [type=missing, input_value={'name': 'Loss Functions ...ation and optimization'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.3.content
-  Field required [type=missing, input_value={'name': 'Introduction to...ks and backpropagation'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.4.content
-  Field required [type=missing, input_value={'name': 'Convolutional N...Computer Vision Course'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.5.content
-  Field required [type=missing, input_value={'name': 'Training Neural...n L6 CNN architectures'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.6.content
-  Field required [type=missing, input_value={'name': 'Training Neural...aining neural networks'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.7.content
-  Field required [type=missing, input_value={'name': 'Deep Learning S...zing and understanding'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.8.content
-  Field required [type=missing, input_value={'name': 'Recurrent Neura...and image segmentation'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.9.content
-  Field required [type=missing, input_value={'name': 'CNN Architectur...urrent neural networks'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.10.content
-  Field required [type=missing, input_value={'name': 'Detection and S...ntion and transformers'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.11.content
-  Field required [type=missing, input_value={'name': 'Detection and S...12 Video understanding'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.12.content
-  Field required [type=missing, input_value={'name': 'Visualizing and... L13 Generative models'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.13.content
-  Field required [type=missing, input_value={'name': 'Generative Mode...lf-supervised learning'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.14.content
-  Field required [type=missing, input_value={'name': 'Deep Reinforcem...Computer Vision Course'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.15.content
-  Field required [type=missing, input_value={'name': 'Efficient Metho...Computer Vision Course'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-chapters.16.content
-  Field required [type=missing, input_value={'name': 'Adversarial Exa...Computer Vision Course'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.8/v/missing
-2024-08-19 18:01:48,639 - app.middlewares.logging - INFO - Response: status_code=500
-2024-08-19 18:07:08,889 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/docs
-2024-08-19 18:07:08,891 - app.middlewares.logging - INFO - Response: status_code=200
-2024-08-19 18:07:09,344 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/openapi.json
-2024-08-19 18:07:09,369 - app.middlewares.logging - INFO - Response: status_code=200
-2024-08-19 18:07:20,531 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/courses?sort_by=alphabetical
-2024-08-19 18:07:21,887 - app.middlewares.logging - ERROR - Data validation error: [{'type': 'missing', 'loc': ('id',), 'msg': 'Field required', 'input': {'_id': ObjectId('66c33188c70d9732bcdd8455'), 'name': 'Computer Vision Course', 'date': 1502398800, 'description': 'Computer Vision has become ubiquitous in our society, with applications in search, image understanding, apps, mapping, medicine, drones, and self-driving cars. Core to many of these applications are visual recognition tasks such as image classification, localization and detection. Recent developments in neural network (aka “deep learning”) approaches have greatly advanced the performance of these state-of-the-art visual recognition systems. This lecture collection is a deep dive into details of the deep learning architectures with a focus on learning end-to-end models for these tasks, particularly image classification. From this course, students will learn to implement, train and debug their own neural networks and gain a detailed understanding of cutting-edge research in computer vision.\n', 'domain': ['computer vision', 'artificial intelligence'], 'chapters': [{'name': 'Introduction to Convolutional Neural Networks for Visual Recognition', 'text': 'Computer Vision Course. CS231n L1 History of computer vision'}, {'name': 'Image Classification', 'text': 'Computer Vision Course'}, {'name': 'Loss Functions and Optimization', 'text': 'Computer Vision Course. CS231n L3 Regularization and optimization'}, {'name': 'Introduction to Neural Networks', 'text': 'Computer Vision Course. CS231n L4 Neural networks and backpropagation'}, {'name': 'Convolutional Neural Networks', 'text': 'Computer Vision Course'}, {'name': 'Training Neural Networks I', 'text': 'Computer Vision Course. CS231n L6 CNN architectures'}, {'name': 'Training Neural Networks II', 'text': 'Computer Vision Course. CS231n L7 Training neural networks'}, {'name': 'Deep Learning Software', 'text': 'Computer Vision Course. CS231n L8 Visualizing and understanding'}, {'name': 'Recurrent Neural Networks', 'text': 'Computer Vision Course. CS231n L9 Object detection and image segmentation'}, {'name': 'CNN Architectures', 'text': 'Computer Vision Course. CS231n L10 Recurrent neural networks'}, {'name': 'Detection and Segmentation', 'text': 'Computer Vision Course. CS231n L11 Attention and transformers'}, {'name': 'Detection and Segmentation', 'text': 'Computer Vision Course. CS231n L12 Video understanding'}, {'name': 'Visualizing and Understanding', 'text': 'Computer Vision Course. CS231n L13 Generative models'}, {'name': 'Generative Models', 'text': 'Computer Vision Course. CS231n L14 Self-supervised learning'}, {'name': 'Deep Reinforcement Learning', 'text': 'Computer Vision Course'}, {'name': 'Efficient Methods and Hardware for Deep Learning', 'text': 'Computer Vision Course'}, {'name': 'Adversarial Examples and Adversarial Training', 'text': 'Computer Vision Course'}]}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 0, 'content'), 'msg': 'Field required', 'input': {'name': 'Introduction to Convolutional Neural Networks for Visual Recognition', 'text': 'Computer Vision Course. CS231n L1 History of computer vision'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 1, 'content'), 'msg': 'Field required', 'input': {'name': 'Image Classification', 'text': 'Computer Vision Course'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 2, 'content'), 'msg': 'Field required', 'input': {'name': 'Loss Functions and Optimization', 'text': 'Computer Vision Course. CS231n L3 Regularization and optimization'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 3, 'content'), 'msg': 'Field required', 'input': {'name': 'Introduction to Neural Networks', 'text': 'Computer Vision Course. CS231n L4 Neural networks and backpropagation'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 4, 'content'), 'msg': 'Field required', 'input': {'name': 'Convolutional Neural Networks', 'text': 'Computer Vision Course'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 5, 'content'), 'msg': 'Field required', 'input': {'name': 'Training Neural Networks I', 'text': 'Computer Vision Course. CS231n L6 CNN architectures'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 6, 'content'), 'msg': 'Field required', 'input': {'name': 'Training Neural Networks II', 'text': 'Computer Vision Course. CS231n L7 Training neural networks'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 7, 'content'), 'msg': 'Field required', 'input': {'name': 'Deep Learning Software', 'text': 'Computer Vision Course. CS231n L8 Visualizing and understanding'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 8, 'content'), 'msg': 'Field required', 'input': {'name': 'Recurrent Neural Networks', 'text': 'Computer Vision Course. CS231n L9 Object detection and image segmentation'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 9, 'content'), 'msg': 'Field required', 'input': {'name': 'CNN Architectures', 'text': 'Computer Vision Course. CS231n L10 Recurrent neural networks'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 10, 'content'), 'msg': 'Field required', 'input': {'name': 'Detection and Segmentation', 'text': 'Computer Vision Course. CS231n L11 Attention and transformers'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 11, 'content'), 'msg': 'Field required', 'input': {'name': 'Detection and Segmentation', 'text': 'Computer Vision Course. CS231n L12 Video understanding'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 12, 'content'), 'msg': 'Field required', 'input': {'name': 'Visualizing and Understanding', 'text': 'Computer Vision Course. CS231n L13 Generative models'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 13, 'content'), 'msg': 'Field required', 'input': {'name': 'Generative Models', 'text': 'Computer Vision Course. CS231n L14 Self-supervised learning'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 14, 'content'), 'msg': 'Field required', 'input': {'name': 'Deep Reinforcement Learning', 'text': 'Computer Vision Course'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 15, 'content'), 'msg': 'Field required', 'input': {'name': 'Efficient Methods and Hardware for Deep Learning', 'text': 'Computer Vision Course'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}, {'type': 'missing', 'loc': ('chapters', 16, 'content'), 'msg': 'Field required', 'input': {'name': 'Adversarial Examples and Adversarial Training', 'text': 'Computer Vision Course'}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}]
-2024-08-19 18:19:26,904 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/docs
-2024-08-19 18:19:26,906 - app.middlewares.logging - INFO - Response: status_code=200
-2024-08-19 18:19:27,317 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/openapi.json
-2024-08-19 18:19:27,346 - app.middlewares.logging - INFO - Response: status_code=200
-2024-08-19 18:19:33,676 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/courses?sort_by=alphabetical
-2024-08-19 18:19:34,166 - app.middlewares.logging - ERROR - Data validation error: [{'type': 'missing', 'loc': ('id',), 'msg': 'Field required', 'input': {'_id': ObjectId('66c33188c70d9732bcdd8455'), 'name': 'Computer Vision Course', 'date': 1502398800, 'description': 'Computer Vision has become ubiquitous in our society, with applications in search, image understanding, apps, mapping, medicine, drones, and self-driving cars. Core to many of these applications are visual recognition tasks such as image classification, localization and detection. Recent developments in neural network (aka “deep learning”) approaches have greatly advanced the performance of these state-of-the-art visual recognition systems. This lecture collection is a deep dive into details of the deep learning architectures with a focus on learning end-to-end models for these tasks, particularly image classification. From this course, students will learn to implement, train and debug their own neural networks and gain a detailed understanding of cutting-edge research in computer vision.\n', 'domain': ['computer vision', 'artificial intelligence'], 'chapters': [{'name': 'Introduction to Convolutional Neural Networks for Visual Recognition', 'text': 'Computer Vision Course. CS231n L1 History of computer vision'}, {'name': 'Image Classification', 'text': 'Computer Vision Course'}, {'name': 'Loss Functions and Optimization', 'text': 'Computer Vision Course. CS231n L3 Regularization and optimization'}, {'name': 'Introduction to Neural Networks', 'text': 'Computer Vision Course. CS231n L4 Neural networks and backpropagation'}, {'name': 'Convolutional Neural Networks', 'text': 'Computer Vision Course'}, {'name': 'Training Neural Networks I', 'text': 'Computer Vision Course. CS231n L6 CNN architectures'}, {'name': 'Training Neural Networks II', 'text': 'Computer Vision Course. CS231n L7 Training neural networks'}, {'name': 'Deep Learning Software', 'text': 'Computer Vision Course. CS231n L8 Visualizing and understanding'}, {'name': 'Recurrent Neural Networks', 'text': 'Computer Vision Course. CS231n L9 Object detection and image segmentation'}, {'name': 'CNN Architectures', 'text': 'Computer Vision Course. CS231n L10 Recurrent neural networks'}, {'name': 'Detection and Segmentation', 'text': 'Computer Vision Course. CS231n L11 Attention and transformers'}, {'name': 'Detection and Segmentation', 'text': 'Computer Vision Course. CS231n L12 Video understanding'}, {'name': 'Visualizing and Understanding', 'text': 'Computer Vision Course. CS231n L13 Generative models'}, {'name': 'Generative Models', 'text': 'Computer Vision Course. CS231n L14 Self-supervised learning'}, {'name': 'Deep Reinforcement Learning', 'text': 'Computer Vision Course'}, {'name': 'Efficient Methods and Hardware for Deep Learning', 'text': 'Computer Vision Course'}, {'name': 'Adversarial Examples and Adversarial Training', 'text': 'Computer Vision Course'}]}, 'url': 'https://errors.pydantic.dev/2.8/v/missing'}]
-2024-08-19 18:22:11,157 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/courses?sort_by=alphabetical
-2024-08-19 18:22:11,635 - app.middlewares.logging - INFO - Fetched courses list successfully.
-2024-08-19 18:22:11,654 - app.middlewares.logging - INFO - Response: status_code=200
-2024-08-19 18:24:53,112 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/docs
-2024-08-19 18:24:53,112 - app.middlewares.logging - INFO - Response: status_code=200
-2024-08-19 18:24:53,653 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/openapi.json
-2024-08-19 18:24:53,694 - app.middlewares.logging - INFO - Response: status_code=200
-2024-08-19 18:25:04,729 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/courses?sort_by=alphabetical
-2024-08-19 18:25:04,967 - app.middlewares.logging - INFO - Fetched courses list successfully.
-2024-08-19 18:25:04,968 - app.middlewares.logging - INFO - Response: status_code=200
-2024-08-19 18:45:31,434 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/
-2024-08-19 18:45:31,437 - app.middlewares.logging - INFO - Response: status_code=200
-2024-08-19 18:45:35,414 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/docs
-2024-08-19 18:45:35,415 - app.middlewares.logging - INFO - Response: status_code=200
-2024-08-19 18:45:35,607 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/openapi.json
-2024-08-19 18:45:35,649 - app.middlewares.logging - INFO - Response: status_code=200
-2024-08-19 18:45:44,017 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/courses
-2024-08-19 18:45:45,121 - app.middlewares.logging - INFO - Fetched courses list successfully.
-2024-08-19 18:45:45,123 - app.middlewares.logging - INFO - Response: status_code=200
-2024-08-19 18:45:54,636 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/courses/1
-2024-08-19 18:45:55,525 - app.middlewares.logging - ERROR - Failed to get course overview: '1' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
-2024-08-19 18:45:55,526 - app.middlewares.logging - INFO - Response: status_code=500
+2024-08-19 19:09:01,158 - app.middlewares.logging - INFO - Response: status_code=500
+app.middlewares.logging - INFO
+Request: POST http://127.0.0.1:8000/courses/66c349746c7f24be73c1469e/chapters/66c349746c7f24be73c14639/rate?rating=2
+
+app.middlewares.logging - ERROR
+Failed to rate chapter: 404: Course not found
+
+app.middlewares.logging - INFO
+Response: status_code=404
+

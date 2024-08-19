@@ -1,5 +1,6 @@
 import json
 import os
+from bson import ObjectId
 from pymongo import MongoClient, ASCENDING, DESCENDING
 from pymongo.errors import ConnectionFailure, CollectionInvalid, PyMongoError
 from pymongo.collection import Collection
@@ -53,6 +54,12 @@ def populate_db():
 
         with open('courses.json', 'r') as file:
             courses = json.load(file)
+
+        # Ensure each chapter has a unique ID
+        for course in courses:
+            for chapter in course.get("chapters", []):
+                if "id" not in chapter:
+                    chapter["id"] = str(ObjectId())
 
         courses_collection.insert_many(courses)
         courses_collection.create_index([("name", ASCENDING)])

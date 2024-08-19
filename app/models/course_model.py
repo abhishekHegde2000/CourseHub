@@ -1,8 +1,11 @@
-from typing import List
-from pydantic import BaseModel, Field
+# app/models/course_model.py
+
+from pydantic import BaseModel
+from typing import List, Optional
 
 
 class Chapter(BaseModel):
+    id: str
     name: str
     text: str
 
@@ -10,8 +13,8 @@ class Chapter(BaseModel):
 class Course(BaseModel):
     id: str
     name: str
-    date: int
+    date: int  # Timestamp for date
     description: str
     domain: List[str]
     chapters: List[Chapter]
-    total_rating: int = 0
+    total_rating: Optional[int] = 0
