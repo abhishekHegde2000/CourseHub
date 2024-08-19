@@ -1,0 +1,14 @@
+2024-08-19 17:26:56,586 - app.main - INFO - Request: GET http://127.0.0.1:8000/docs
+2024-08-19 17:26:56,586 - app.main - INFO - Response: status_code=200
+2024-08-19 17:26:57,205 - app.main - INFO - Request: GET http://127.0.0.1:8000/openapi.json
+2024-08-19 17:26:57,212 - app.main - INFO - Response: status_code=200
+2024-08-19 17:27:01,614 - app.main - INFO - Request: GET http://127.0.0.1:8000/
+2024-08-19 17:27:01,616 - app.main - INFO - Response: status_code=200
+2024-08-19 17:29:08,406 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/
+2024-08-19 17:29:08,406 - app.middlewares.logging - INFO - Response: status_code=200
+2024-08-19 17:29:09,399 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/
+2024-08-19 17:29:09,415 - app.middlewares.logging - INFO - Response: status_code=200
+2024-08-19 17:29:10,281 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/
+2024-08-19 17:29:10,281 - app.middlewares.logging - INFO - Response: status_code=200
+2024-08-19 17:29:10,998 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/
+2024-08-19 17:29:10,998 - app.middlewares.logging - INFO - Response: status_code=200
