@@ -1,5 +1,7 @@
-from fastapi import FastAPI, HTTPException, Depends, Request
+from fastapi import FastAPI, HTTPException, Depends, Query, Request
 from typing import List, Optional
+
+from pydantic import ValidationError
 from app.db.database import populate_db
 from app.middlewares.logging import logger
 from app.middlewares.cors import origins
@@ -45,11 +47,18 @@ def read_root():
 
 @app.get("/courses", response_model=List[CourseSchema])
 def list_courses(
-    sort_by: Optional[str] = "alphabetical",
-    domain: Optional[str] = None
+    sort_by: Optional[str] = Query(
+        "alphabetical", description="Sort by: 'alphabetical', 'date', or 'rating'"),
+    domain: Optional[str] = Query(None, description="Filter courses by domain")
 ):
     try:
-        return get_all_courses(sort_by, domain)
+        courses = get_all_courses(sort_by, domain)
+        logger.info("Fetched courses list successfully.")
+        return courses
+    except ValidationError as e:
+        logger.error(f"Data validation error: {e.errors()}")
+        logger.error(f"Offending data: {e.raw_data}")
+        raise HTTPException(status_code=422, detail="Data validation error")
     except Exception as e:
         logger.error(f"Failed to list courses: {e}")
         raise HTTPException(status_code=500, detail="Internal Server Error")

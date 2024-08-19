@@ -1,11 +1,14 @@
-from pydantic import BaseModel
 from pydantic import BaseModel, Field
 from typing import List
 
+# MongoDB Chapter schema uses 'text' field instead of 'content'
+
 
 class ChapterSchema(BaseModel):
-    title: str = Field(..., description="Title of the chapter")
-    contents: str = Field(..., description="Contents of the chapter")
+    name: str = Field(..., description="Title of the chapter")
+    text: str = Field(..., description="Contents of the chapter")
+
+# Course schema
 
 
 class CourseSchema(BaseModel):
@@ -18,4 +21,5 @@ class CourseSchema(BaseModel):
 
 
 class RateResponseSchema(BaseModel):
-    message: str
+    message: str = Field(..., description="Response message")
+    rating: int = Field(..., description="Total rating for the chapter")

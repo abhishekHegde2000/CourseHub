@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 class Chapter(BaseModel):
     name: str
-    content: str
+    text: str
 
 
 class Course(BaseModel):

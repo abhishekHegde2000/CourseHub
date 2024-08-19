@@ -1,3 +1,6 @@
+from bson import ObjectId
+from pymongo import ASCENDING, DESCENDING
+from typing import Optional
 from typing import List, Optional
 from app.models.course_model import Course, Chapter
 from pymongo import MongoClient, ASCENDING, DESCENDING
@@ -24,7 +27,23 @@ def get_all_courses(sort_by: str, domain: Optional[str]):
     }.get(sort_by, ("name", ASCENDING))
 
     courses = list(courses_collection.find(query).sort([sort_field]))
-    return [Course(**course) for course in courses]
+
+    # Transform MongoDB documents to match Pydantic models
+    return [
+        {
+            "id": str(course["_id"]),  # Transform ObjectId to string
+            "name": course["name"],
+            "date": course["date"],
+            "description": course["description"],
+            "domain": course["domain"],
+            "chapters": [
+                {"name": chapter["name"], "text": chapter["text"]}
+                for chapter in course.get("chapters", [])
+            ],
+            "total_rating": course.get("total_rating", 0)
+        }
+        for course in courses
+    ]
 
 
 def get_course_overview(course_id: str):

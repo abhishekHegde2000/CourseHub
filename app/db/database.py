@@ -33,6 +33,9 @@ def populate_db():
                 print("Collection 'courses' already exists.")
         else:
             courses_collection = db.courses
+            # Delete all documents in the collection
+            courses_collection.delete_many({})
+            print("All documents in the 'courses' collection have been deleted.")
 
         with open('courses.json', 'r') as file:
             courses = json.load(file)
