@@ -1,6 +1,5 @@
-# Pydantic models for request/response
 from typing import List
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class Chapter(BaseModel):

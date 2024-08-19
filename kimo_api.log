@@ -77,3 +77,15 @@ chapters.16.content
 2024-08-19 18:25:04,729 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/courses?sort_by=alphabetical
 2024-08-19 18:25:04,967 - app.middlewares.logging - INFO - Fetched courses list successfully.
 2024-08-19 18:25:04,968 - app.middlewares.logging - INFO - Response: status_code=200
+2024-08-19 18:45:31,434 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/
+2024-08-19 18:45:31,437 - app.middlewares.logging - INFO - Response: status_code=200
+2024-08-19 18:45:35,414 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/docs
+2024-08-19 18:45:35,415 - app.middlewares.logging - INFO - Response: status_code=200
+2024-08-19 18:45:35,607 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/openapi.json
+2024-08-19 18:45:35,649 - app.middlewares.logging - INFO - Response: status_code=200
+2024-08-19 18:45:44,017 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/courses
+2024-08-19 18:45:45,121 - app.middlewares.logging - INFO - Fetched courses list successfully.
+2024-08-19 18:45:45,123 - app.middlewares.logging - INFO - Response: status_code=200
+2024-08-19 18:45:54,636 - app.middlewares.logging - INFO - Request: GET http://127.0.0.1:8000/courses/1
+2024-08-19 18:45:55,525 - app.middlewares.logging - ERROR - Failed to get course overview: '1' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2024-08-19 18:45:55,526 - app.middlewares.logging - INFO - Response: status_code=500
