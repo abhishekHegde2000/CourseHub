@@ -6,3 +6,5 @@ pydantic
 cors
 python-dotenv
 starlette
+pytest
+httpx

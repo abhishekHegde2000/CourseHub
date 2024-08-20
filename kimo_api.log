@@ -13,3 +13,24 @@ Failed to rate chapter: 404: Course not found
 app.middlewares.logging - INFO
 Response: status_code=404
 
+app.middlewares.logging - INFO
+Request: GET http://127.0.0.1:8000/docs
+
+app.middlewares.logging - INFO
+Response: status_code=200
+
+app.middlewares.logging - INFO
+Request: GET http://127.0.0.1:8000/openapi.json
+
+app.middlewares.logging - INFO
+Response: status_code=200
+
+app.middlewares.logging - INFO
+Request: GET http://127.0.0.1:8000/courses?sort_by=alphabetical
+
+app.middlewares.logging - INFO
+Fetched courses list successfully.
+
+app.middlewares.logging - INFO
+Response: status_code=200
+
