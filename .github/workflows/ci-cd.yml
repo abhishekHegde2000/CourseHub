@@ -33,10 +33,10 @@ jobs:
                   pip install -r requirements.txt
 
             - name: Run tests
-              run: |
-                  pytest
+              run: pytest
 
     docker:
+        needs: build
         runs-on: ubuntu-latest
 
         steps:
@@ -48,9 +48,9 @@ jobs:
 
             - name: Build and push Docker image
               run: |
-                  docker build -t your_dockerhub_username/your_image_name:latest .
-                  docker push your_dockerhub_username/your_image_name:latest
+                  docker build -t ahegde2021/coursehub-app:latest .
+                  docker push ahegde2021/coursehub-app:latest
 
-            - name: Deploy to Docker Hub
+            - name: Deploy with Docker Compose
               run: |
                   docker-compose -f docker-compose.yml up -d

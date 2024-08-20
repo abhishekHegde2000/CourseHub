@@ -10,12 +10,12 @@ COPY . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 80 available to the world outside this container
-EXPOSE 80
+# Make port 8000 available to the world outside this container
+EXPOSE 8000
 
-# Define environment variable
-ENV MONGO_URL=mongodb://mongo:27017
-ENV MONGO_DB=your_db_name
+# Define environment variables
+ENV MONGO_URL=${MONGO_URL}
+ENV MONGO_DB=${MONGO_DB}
 
-# Run app/main.py when the container launches
-CMD ["python", "app/main.py"]
+# Run the FastAPI app with Uvicorn
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
