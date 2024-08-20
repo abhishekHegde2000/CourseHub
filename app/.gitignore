@@ -4,11 +4,13 @@
 # Python cache directories
 __pycache__/
 .pytest_cache/
+__pycache__/*
+
 
 # Virtual environment
 venv/
 
-# IDE-specific files
+# IDE-specific filesa
 .idea/
 *.iml
 *.DS_Store
